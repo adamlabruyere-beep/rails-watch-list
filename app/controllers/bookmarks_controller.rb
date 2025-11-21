@@ -19,7 +19,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
     # No need for app/views/bookmarks/destroy.html.erb
-    redirect_to lists_path(@bookmark.list), status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private
