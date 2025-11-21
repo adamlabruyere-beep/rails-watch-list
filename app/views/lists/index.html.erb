@@ -1,7 +1,10 @@
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="top">  <p class="new_list_btn"><%= link_to "New list", new_list_path(@list), class:"link_to" %></p></div>
 
-<%= link_to "New list", new_list_path(@list) %>
+<div class="container">
+  <div class="list">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"><%= link_to list.name, list_path(list), class:"link_to" %></div>
+    <% end %>
+  </div>
+
+</div>
